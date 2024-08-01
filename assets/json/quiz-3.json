@@ -1,0 +1,49 @@
+{
+    "quizName": "JavaScript Quiz",
+    "quizDesc": "This quiz is testing basic of Javascript.",
+    "active": true,
+    "questions":[
+        {
+            "question": "How do you declare a variable in JavaScript?",
+            "answer": 1,
+            "options":[
+                "variable x;",
+                "var x;",
+                "int x;",
+                " x = var;"
+            ]
+        },
+        {
+            "question": "What is the correct way to write an IF statement in JavaScript?",
+            "answer":1,
+            "options":[
+                "if x == 5 then",
+                "if (x == 5)",
+                "if x = 5",
+                "if x = 5 then"
+            ]
+
+        },
+        {
+            "question": "How do you write a function in JavaScript?",
+            "answer": 2,
+            "options": [
+                "function = myFunction() {}",
+                "function: myFunction() {}",
+                "function myFunction() {}",
+                "myFunction() = function() {}"
+            ]
+        },
+        {
+            "question": "What method is used to add an element to the end of an array in JavaScript?",
+            "answer":1,
+            "options":[
+                "pop",
+                "push",
+                "merge",
+                "length"
+            ]
+        }
+
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "quizName": "HTML Quiz",
+    "quizDesc" : "This quiz is testing your knowlege on basic HTML tags.",
+    "active": true,
+    "questions": [
+        {
+            "question": "What does HTML stand for",
+            "answer": 0,
+            "options": [
+                "Hyper Text Markup Language",
+                "High Tech Markup Language",
+                "Home Tool Markup Language",
+                "Hyperlinks and Text Markup Language"
+            ]
+        },
+        {
+            "question": "Which tag is used to define an unordered list in HTML?",
+            "answer": 0,
+            "options": [
+                "<ul>",
+                "<ol>",
+                "<li>",
+                "<list>"
+            ]
+        },
+        {
+            "question": "In HTML, which attribute is used to specify a unique identifier for an element?",
+            "answer": 0,
+            "options": [
+                "id",
+                "class",
+                "type",
+                "name"
+            ]
+        },
+        {
+            "question": "What is the correct HTML tag for inserting an image?",
+            "answer": 2,
+            "options": [
+                "<image href=image.jpg>",
+                "<image src=image.jpg>",
+                "<img src=image.jpg>",
+                "<img href=image.jpg>"
+            ]
+        },
+        {
+            "question": "How can you create a hyperlink in HTML?",
+            "answer": 1,
+            "options": [
+                "<link>",
+                "<a href=http://example.com>Example</a>",
+                "<href>",
+                "<hyperlink>"
+            ]
+        }
+    ]
+}
