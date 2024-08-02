@@ -54,7 +54,7 @@ btnStartModal.addEventListener('click', function () {
         usernameError.classList.add('d-none');
         localStorage.setItem("username", username);
 
-        let url = '.../question.html';
+        let url = 'testingv2/question.html';
 
         console.log(`Navigating to URL: ${url}`);
         location.assign(url);
