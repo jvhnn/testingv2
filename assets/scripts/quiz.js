@@ -56,7 +56,7 @@ btnStartModal.addEventListener('click', function () {
 
         let url = 'question.html';
         if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
-            url = './question.html';
+            url = '/question.html';
         }
 
         console.log(`Navigating to URL: ${url}`);
