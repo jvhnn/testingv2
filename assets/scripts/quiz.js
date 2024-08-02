@@ -2,20 +2,19 @@ const btnStart = document.querySelector("#btn-start-quiz");
 const btnStartModal = document.querySelector("#btn-start-quiz-modal");
 
 async function fetchQuizData(quizId) {
-    const requestURL = `./assets/json/quiz-${quizId}.json`;
-    
+    const url = `https://jvhnn.github.io/Code-Quiz/assets/json/quiz-${quizId}.json`;
     try {
-      const response = await fetch(requestURL);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const quiz = await response.json();
-      console.log("Fetched quiz data:", quiz); // Log fetched data
-      return quiz;
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
     } catch (error) {
-      console.error(`Failed to fetch quiz data: ${error}`);
+        console.error("Failed to fetch quiz data:", error);
+        return null;
     }
-  }
+}
 
   const renderQuiz = async function() {
     const quizError = document.querySelector("#quiz-error");
