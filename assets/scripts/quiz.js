@@ -67,3 +67,4 @@ btnStartModal.addEventListener('click', function () {
 
 renderQuiz();
 
+
