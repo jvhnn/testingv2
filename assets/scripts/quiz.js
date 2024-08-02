@@ -54,10 +54,7 @@ btnStartModal.addEventListener('click', function () {
         usernameError.classList.add('d-none');
         localStorage.setItem("username", username);
 
-        let url = 'question.html';
-        if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
-            url = '/question.html';
-        }
+        let url = '/question.html';
 
         console.log(`Navigating to URL: ${url}`);
         location.assign(url);
@@ -66,3 +63,4 @@ btnStartModal.addEventListener('click', function () {
 
 
 renderQuiz();
+
