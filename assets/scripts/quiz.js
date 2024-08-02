@@ -17,35 +17,37 @@ async function fetchQuizData(quizId) {
     }
   }
 
-const renderQuiz = async function() {
+  const renderQuiz = async function() {
     const quizError = document.querySelector("#quiz-error");
     const quizInfo = document.querySelector("#quiz-info");
     const quizId = parseInt(localStorage.getItem("quizeId"));
   
     if (isNaN(quizId)) {
-      quizInfo.classList.add("d-none");
-      quizError.classList.remove("d-none");
-      console.log("Quiz ID is not a number. Displaying error message.");
+        quizInfo.classList.add("d-none");
+        quizError.classList.remove("d-none");
+        console.log("Quiz ID is not a number. Displaying error message.");
     } else {
-      quizInfo.classList.remove("d-none");
-      quizError.classList.add("d-none");
+        quizInfo.classList.remove("d-none");
+        quizError.classList.add("d-none");
   
-      const quiz = await fetchQuizData(quizId);
+        const quiz = await fetchQuizData(quizId);
   
-      if (quiz) {
-        const quizName = document.querySelector("#quiz-name");
-        const quizDesc = document.querySelector("#quiz-desc");
-        const totalCount = document.querySelector("#quiz-ques");
+        if (quiz) {
+            const quizName = document.querySelector("#quiz-name");
+            const quizDesc = document.querySelector("#quiz-desc");
+            const totalCount = document.querySelector("#quiz-ques");
   
-        quizName.textContent = quiz.quizName;
-        quizDesc.textContent = quiz.quizDesc;
-        totalCount.textContent = quiz.questions.length;
-        console.log("Quiz data rendered successfully.");
-      } else {
-        console.error("Quiz data is null or undefined.");
-      }
+            quizName.textContent = quiz.quizName;
+            quizDesc.textContent = quiz.quizDesc;
+            totalCount.textContent = quiz.questions.length;
+            console.log("Quiz data rendered successfully.");
+        } else {
+            quizInfo.classList.add("d-none");
+            quizError.classList.remove("d-none");
+            console.error("Quiz data is null or undefined. Displaying error message.");
+        }
     }
-  };
+};
 
 
 btnStart.addEventListener('click', function() {
