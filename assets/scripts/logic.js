@@ -1,6 +1,6 @@
 async function fetchQuizData(quizId) {
     
-  const requestURL = `./assets/json/quiz-${2}.json`;
+  const requestURL = `./assets/json/quiz-${quizId}.json`;
 
   try {
     const response = await fetch(requestURL);
